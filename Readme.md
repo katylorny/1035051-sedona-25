@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Екатерина Филичева](https://up.htmlacademy.ru/htmlcss/25/user/1035051).
-* Наставник: [Денис Выхрыстюк] (https://htmlacademy.ru/profile/id568747).
+* Наставник: [Денис Выхрыстюк](https://htmlacademy.ru/profile/id568747).
 
 ---
 
