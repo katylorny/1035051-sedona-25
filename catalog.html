@@ -21,38 +21,80 @@
 <main class="container">
 
 
-  <section class>
+  <section class="hotels">
     <h1 class="visually-hidden">Список гостиниц</h1>
-    <article class="hotel-booking">
-      <h2><a href="#">Amara Resort & Spa</a></h2>
-      <p><a href="#"><img src="img/hotel-small-1.jpg" alt="Фото отеля 1"></a></p>
-      <span>Гостиница</span>
-      <span>От 4000р</span>
-      <a href="#">Подробнее</a>
-      <a href="#">Забронировать</a>
-      <p><span>&#9733;&#9733;&#9733;&#9733;</span>
-        <span>Рейтинг: 8,5</span></p>
-    </article>
-    <article class="hotel-booking">
-      <h2><a href="#">Desert Quail Inn</a></h2>
-      <p><a href="#"><img src="img/hotel-small-2.jpg" alt="Фото отеля 2"></a></p>
-      <span>Мотель</span>
-      <span>От 3000р</span>
-      <a href="#">Подробнее</a>
-      <a href="#">Забронировать</a>
-      <p><span>&#9733;&#9733;&#9733;</span>
-        <span>Рейтинг: 8,9</span></p>
-    </article>
-    <article class="hotel-booking">
-      <h2><a href="#">Villas at Poco Diablo</a></h2>
-      <p><a href="#"><img src="img/hotel-small-3.jpg" alt="Фото отеля 3"></a></p>
-      <span>Апартаменты</span>
-      <span>От 2000р</span>
-      <a href="#">Подробнее</a>
-      <a href="#">Забронировать</a>
-      <p><span>&#9733;&#9733;</span>
-        <span>Рейтинг: 9,2</span></p>
-    </article>
+    <ul class="hotels-list">
+
+
+      <li class="hotel-item">
+        <a href="#"><img src="img/hotel-small-1.jpg" alt="Фото отеля 1"></a>
+        <div class="hotel-item-booking">
+          <h2><a href="#">Amara Resort & Spa</a></h2>
+          <p>
+            <span class="hotel-category">Гостиница</span>
+            <span class="hotel-item-price">От 4000р</span>
+          </p>
+          <div>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+          </div>
+        </div>
+        <div class="hotel-item-rating">
+          <ul class="hotel-item-stars">
+            <li><img src="img/star.svg" alt="Звезда"></li>
+            <li><img src="img/star.svg" alt="Звезда"></li>
+            <li><img src="img/star.svg" alt="Звезда"></li>
+            <li><img src="img/star.svg" alt="Звезда"></li>
+          </ul>
+          <span>Рейтинг: 8,5</span>
+        </div>
+      </li>
+
+      <li class="hotel-item">
+        <a href="#"><img src="img/hotel-small-2.jpg" alt="Фото отеля 2"></a>
+        <div class="hotel-item-booking">
+          <h2><a href="#">Desert Quail Inn</a></h2>
+          <p>
+            <span class="hotel-category">Мотель</span>
+            <span class="hotel-item-price">От 3000р</span>
+          </p>
+          <div>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+          </div>
+        </div>
+        <div class="hotel-item-rating">
+          <ul class="hotel-item-stars">
+            <li><img src="img/star.svg" alt="Звезда"></li>
+            <li><img src="img/star.svg" alt="Звезда"></li>
+            <li><img src="img/star.svg" alt="Звезда"></li>
+          </ul>
+          <span>Рейтинг: 8,9</span>
+        </div>
+      </li>
+
+      <li class="hotel-item">
+        <a href="#"><img src="img/hotel-small-3.jpg" alt="Фото отеля 3"></a>
+        <div class="hotel-item-booking">
+          <h2><a href="#">Villas at Poco Diablo</a></h2>
+          <p>
+            <span class="hotel-category">Апартаменты</span>
+            <span class="hotel-item-price">От 2000р</span>
+          </p>
+          <div>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+          </div>
+        </div>
+        <div class="hotel-item-rating">
+          <ul class="hotel-item-stars">
+            <li><img src="img/star.svg" alt="Звезда"></li>
+            <li><img src="img/star.svg" alt="Звезда"></li>
+          </ul>
+          <span>Рейтинг: 9,2</span>
+        </div>
+      </li>
+    </ul>
   </section>
 </main>
 
@@ -63,7 +105,7 @@
     <li><a href="#" class="social-button">Фейсбук</a></li>
     <li><a href="#" class="social-button">Ютуб</a></li>
   </ul>
-  <p>Website by <img src="htmlacademy.svg" alt="Логотип htmlacademy"></p>
+  <p>Website by <a href="https://htmlacademy.ru/"><img src="htmlacademy.svg" alt="Логотип htmlacademy"></a></p>
 </footer>
 </body>
 </html>
