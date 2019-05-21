@@ -31,8 +31,14 @@
   <section class="hotel-search">
     <h2>Заинтересовались?</h2>
     <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <button>Поиск гостиницы в Седоне</button>
-      <span class="forms"> </span>
+      <form>
+        <button>Поиск гостиницы в Седоне</button>
+        <p><label>Дата заезда: <input type="text" name="arrival" value="24 апреля 2017"> </label><button type="button" class="button-calendar" aria-label="Открыть календарь"></button> </p>
+        <p></p><label>Дата выезда: <input type="text" name="departure" value="4 июля 2017"> </label><button type="button" class="button-calendar" aria-label="Открыть календарь"></button> </p>
+        <p><label>Взрослые: <button class="" type="button"></button><input type="text" name="adults" value="2"><button class="" type="button"></button></label>
+          <label>Дети: <button class="" type="button"></button> <input type="text" name="kids" value="0"> <button class="" type="button"></button> </label></p>
+        <button class="button search-button" type="submit" >Найти</button>
+      </form>
   </section>
 
 </main>
@@ -40,9 +46,9 @@
 <footer class="main-footer">
   <p>#VISITSEDONA</p>
   <ul class="social">
-    <li><a href="#" class="social-button"><img src="img/twitter.svg" alt="Твиттер" width="17" height="15"> </a></li>
-    <li><a href="#" class="social-button"><img src="img/facebook.svg" alt="Фейсбук" width="12" height="22"> </a></li>
-    <li><a href="#" class="social-button"><img src="img/youtube.svg" alt="Ютуб" width="20" height="16"> </a></li>
+    <li><a href="#" class="social-button" aria-label="Седона в Твиттере">Твиттер</a></li>
+    <li><a href="#" class="social-button" aria-label="Седона на Фейсбуке">Фейсбук</a></li>
+    <li><a href="#" class="social-button" aria-label="Седона на Ютубе">Ютуб </a></li>
   </ul>
   <p>Website by <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy.svg" alt="Логотип htmlacademy" width="115" height="41"></a></p>
 </footer>
