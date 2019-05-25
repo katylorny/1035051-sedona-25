@@ -10,8 +10,7 @@ body {
   text-transform: uppercase;
 
   background-color: white;
-  background-image: url("bg/bg-main.jpg"),
-  url("bg/bg-map.jpg");;
+  background-image: url("../bg/bg-main.jpg");
   background-position: top center, bottom center;
   background-repeat: no-repeat;
 }
@@ -55,7 +54,7 @@ body {
 
 .welcome {
   text-align: center;
-  background-image: url("bg/bg-mask.svg");
+  background-image: url("../bg/bg-mask.svg");
   background-repeat: no-repeat;
   background-position: bottom center;
 }
@@ -109,6 +108,7 @@ body {
 
 .hotel-search-form {
   background-color: white;
+  background-image: url("../bg/bg-map.jpg");
   line-height: 26px;
   font-weight: bold;
 }
