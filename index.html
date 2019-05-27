@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="main-header">
+<header class="main-header container">
   <nav>
     <ul class="main-nav">
       <li><a href="info.html">Информация</a></li>
@@ -26,25 +26,28 @@
     <img src="img/welcome.svg" alt="Добро пожаловать в Седону" width="459" height="353">
   </div>
   <section class="about-sedona">
-    <h1> Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-    <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
-
-
+    <div class="about-sedona-text">
+      <h1> Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1> <!--Заменила тире на длинное!!!-->
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+    </div>
+    <section class="vremenno"></section>
   </section>
   <section class="hotel-search">
-    <h2>Заинтересовались?</h2>
-    <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-
+    <div class="hotel-search-text">
+      <h2>Заинтересовались?</h2>
+      <p>Укажите предполагаемые даты поездки, </br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+    </div>
     <button class="button-hotel-search">Поиск гостиницы в Седоне</button>
   </section>
+  <section class="interactive-map container">
   <div class="hotel-search-form">
     <form>
       <p><label>Дата заезда: <input type="text" name="arrival" value="24 апреля 2017"> </label>
         <button type="button" class="button-calendar" aria-label="Открыть календарь"></button>
       </p>
-      <p></p><label>Дата выезда: <input type="text" name="departure" value="4 июля 2017"> </label>
+      <p><label>Дата выезда: <input type="text" name="departure" value="4 июля 2017"> </label>
       <button type="button" class="button-calendar" aria-label="Открыть календарь"></button>
-
+      </p>
       <button class="" type="button"></button>
       <p><label>Взрослые:
         <input type="text" name="adults" value="2">
@@ -59,17 +62,18 @@
       <button class="button search-button" type="submit">Найти</button>
     </form>
   </div>
-
+  </section>
 </main>
 
-<footer class="main-footer">
-  <p class="hashtag">#VISITSEDONA</p>
+<footer class="main-footer container">
+
+  <p class="hashtag"> #VISITSEDONA </p>
   <ul class="social">
     <li><a href="#" class="social-button" aria-label="Седона в Твиттере">Твиттер</a></li>
     <li><a href="#" class="social-button" aria-label="Седона на Фейсбуке">Фейсбук</a></li>
     <li><a href="#" class="social-button" aria-label="Седона на Ютубе">Ютуб </a></li>
   </ul>
-  <p>Website by <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy.svg" alt="Логотип htmlacademy"
+  <p class="copyright">Website by <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy.svg" alt="Логотип htmlacademy"
                                                        width="115" height="41"></a></p>
 </footer>
 </body>
