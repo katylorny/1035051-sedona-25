@@ -8,20 +8,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="main-header container">
-  <nav>
-    <ul class="main-nav">
-      <li><a href="info.html">Информация</a></li>
-      <li><a href="galery.html">Фото и видео</a></li>
-      <li class="logo"><a class="logo"><img src="img/logo.svg" alt="City of Sedona" width="140" height="72"></a></li>
-      <li><a href="map.html">Карта штата</a></li>
-      <li><a href="hotels.html">Гостиницы</a></li>
+<div  class="container">
+<header class="header">
+  <nav class="nav">
+    <ul class="nav__items">
+      <li class="nav__item">
+        <a class="nav__link" href="info.html">Информация</a></li>
+      <li class="nav__item">
+        <a class="nav__link" href="galery.html">Фото и видео</a></li>
+      <li class="nav__item">
+        <a class="nav__logo">
+          <img src="img/logo.svg" alt="City of Sedona" width="140" height="72"></a></li>
+      <li class="nav__item">
+        <a class="nav__link nav__link--active" href="map.html">Карта штата</a></li>
+      <li class="nav__item">
+        <a class="nav__link" href="hotels.html">Гостиницы</a></li>
     </ul>
   </nav>
 </header>
 
-
-<main class="container">
+<main>
   <div class="welcome">
     <img src="img/welcome.svg" alt="Добро пожаловать в Седону" width="459" height="353">
   </div>
@@ -35,12 +41,12 @@
   <section class="hotel-search">
     <div class="hotel-search-text">
       <h2>Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки, </br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     </div>
     <button class="button-hotel-search">Поиск гостиницы в Седоне</button>
   </section>
-  <section class="interactive-map container">
-  <div class="hotel-search-form">
+  <section class="interactive-map">
+  <div class="search-form">
     <form>
       <p><label>Дата заезда: <input type="text" name="arrival" value="24 апреля 2017"> </label>
         <button type="button" class="button-calendar" aria-label="Открыть календарь"></button>
@@ -57,7 +63,7 @@
         <label>Дети:
           <input type="text" name="kids" value="0">
         </label>
-        <button class="" type="button"></button>
+        <button class="search-form__plus" type="button"></button>
       </p>
       <button class="button search-button" type="submit">Найти</button>
     </form>
@@ -65,7 +71,7 @@
   </section>
 </main>
 
-<footer class="main-footer container">
+<footer class="footer">
 
   <p class="hashtag"> #VISITSEDONA </p>
   <ul class="social">
@@ -76,5 +82,6 @@
   <p class="copyright">Website by <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy.svg" alt="Логотип htmlacademy"
                                                        width="115" height="41"></a></p>
 </footer>
+</div>
 </body>
 </html>
