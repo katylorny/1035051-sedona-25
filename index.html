@@ -8,80 +8,81 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div  class="container">
-<header class="header">
-  <nav class="nav">
-    <ul class="nav__items">
-      <li class="nav__item">
-        <a class="nav__link" href="info.html">Информация</a></li>
-      <li class="nav__item">
-        <a class="nav__link" href="galery.html">Фото и видео</a></li>
-      <li class="nav__item">
-        <a class="nav__logo">
-          <img src="img/logo.svg" alt="City of Sedona" width="140" height="72"></a></li>
-      <li class="nav__item">
-        <a class="nav__link nav__link--active" href="map.html">Карта штата</a></li>
-      <li class="nav__item">
-        <a class="nav__link" href="hotels.html">Гостиницы</a></li>
+<div class="container">
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav__items">
+        <li class="nav__item">
+          <a class="nav__link" href="info.html">Информация</a></li>
+        <li class="nav__item">
+          <a class="nav__link" href="galery.html">Фото и видео</a></li>
+        <li class="nav__logo">
+          <a>
+            <img src="img/logo.svg" alt="City of Sedona" width="140" height="72"></a></li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--active" href="map.html">Карта штата</a></li>
+        <li class="nav__item">
+          <a class="nav__link" href="hotels.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="welcome">
+      <img src="img/welcome.svg" alt="Добро пожаловать в Седону" width="459" height="353">
+    </div>
+    <section class="about-sedona">
+      <div class="about-sedona__text">
+        <h1> Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1> <!--Заменила тире на длинное!!!-->
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      </div>
+      <div class="about-sedona__features"></div>
+    </section>
+
+    <section class="hotel-search">
+      <div class="hotel-search__text">
+        <h2>Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="hotel-search__button">Поиск гостиницы в Седоне</button>
+      </div>
+      <div class="search-form">
+        <form>
+          <p><label>Дата заезда: <input type="text" name="arrival" value="24 апреля 2017"> </label>
+            <button type="button" class="button-calendar" aria-label="Открыть календарь"></button>
+          </p>
+          <p><label>Дата выезда: <input type="text" name="departure" value="4 июля 2017"> </label>
+            <button type="button" class="button-calendar" aria-label="Открыть календарь"></button>
+          </p>
+          <p>
+            <label for="adults">Взрослые:</label>
+            <button class="search-form__minus" type="button"></button>
+            <input type="text" id="adults" name="adults" value="2">
+            <button class="search-form__plus" type="button"></button>
+            <label for="kids" >Дети:</label>
+            <button class="search-form__minus" type="button"></button>
+              <input type="text" id="kids" name="kids" value="0">
+            <button class="search-form__plus" type="button"></button>
+          </p>
+          <button class="button search-button" type="submit">Найти</button>
+        </form>
+      </div>
+      <div class="interactive-map">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+
+    <p class="hashtag"> #VISITSEDONA </p>
+    <ul class="social">
+      <li><a href="#" class="social__button tw-button" aria-label="Седона в Твиттере">Твиттер</a></li>
+      <li><a href="#" class="social__button fb-button" aria-label="Седона на Фейсбуке">Фейсбук</a></li>
+      <li><a href="#" class="social__button yt-button" aria-label="Седона на Ютубе">Ютуб </a></li>
     </ul>
-  </nav>
-</header>
-
-<main>
-  <div class="welcome">
-    <img src="img/welcome.svg" alt="Добро пожаловать в Седону" width="459" height="353">
-  </div>
-  <section class="about-sedona">
-    <div class="about-sedona-text">
-      <h1> Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1> <!--Заменила тире на длинное!!!-->
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-    </div>
-    <section class="vremenno"></section>
-  </section>
-  <section class="hotel-search">
-    <div class="hotel-search-text">
-      <h2>Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-    </div>
-    <button class="button-hotel-search">Поиск гостиницы в Седоне</button>
-  </section>
-  <section class="interactive-map">
-  <div class="search-form">
-    <form>
-      <p><label>Дата заезда: <input type="text" name="arrival" value="24 апреля 2017"> </label>
-        <button type="button" class="button-calendar" aria-label="Открыть календарь"></button>
-      </p>
-      <p><label>Дата выезда: <input type="text" name="departure" value="4 июля 2017"> </label>
-      <button type="button" class="button-calendar" aria-label="Открыть календарь"></button>
-      </p>
-      <button class="" type="button"></button>
-      <p><label>Взрослые:
-        <input type="text" name="adults" value="2">
-      </label>
-        <button class="" type="button"></button>
-        <button class="" type="button"></button>
-        <label>Дети:
-          <input type="text" name="kids" value="0">
-        </label>
-        <button class="search-form__plus" type="button"></button>
-      </p>
-      <button class="button search-button" type="submit">Найти</button>
-    </form>
-  </div>
-  </section>
-</main>
-
-<footer class="footer">
-
-  <p class="hashtag"> #VISITSEDONA </p>
-  <ul class="social">
-    <li><a href="#" class="social-button" aria-label="Седона в Твиттере">Твиттер</a></li>
-    <li><a href="#" class="social-button" aria-label="Седона на Фейсбуке">Фейсбук</a></li>
-    <li><a href="#" class="social-button" aria-label="Седона на Ютубе">Ютуб </a></li>
-  </ul>
-  <p class="copyright">Website by <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy.svg" alt="Логотип htmlacademy"
-                                                       width="115" height="41"></a></p>
-</footer>
+    <p class="copyright">Website by <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy.svg"
+                                                                           alt="Логотип htmlacademy"
+                                                                           width="115" height="41"></a></p>
+  </footer>
 </div>
 </body>
 </html>

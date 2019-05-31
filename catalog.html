@@ -16,8 +16,8 @@
           <a class="nav__link" href="info.html">Информация</a></li>
         <li class="nav__item">
           <a class="nav__link" href="galery.html">Фото и видео</a></li>
-        <li class="nav__item">
-          <a class="nav__logo">
+        <li class="nav__logo">
+          <a>
             <img src="img/logo.svg" alt="City of Sedona" width="140" height="72"></a></li>
         <li class="nav__item">
           <a class="nav__link nav__link--active" href="map.html">Карта штата</a></li>
@@ -28,25 +28,23 @@
   </header>
 
   <main>
-    <section class="vremenno2"></section>
+    <section class="filter">
+    </section>
 
     <section class="hotels">
       <h1 class="visually-hidden">Список гостиниц</h1>
       <ul class="hotels__items">
-
-
-        <li class="hotel__item">
-
-          <a class="hotel__link" href="#">
-            <img class="hotel_logo" src="img/hotel-small-1.jpg" alt="Фото отеля 1" width="135" height="90">
+        <li class="hotels__item">
+          <a class="hotel-link" href="#">
+            <img class="hotel-logo" src="img/hotel-small-1.jpg" alt="Фото отеля 1" width="135" height="90">
           </a>
-          <div class="hotel-item-booking">
+          <div class="hotel-booking">
             <h2>
               <a class="hotel-name" href="#">Amara Resort & Spa</a>
             </h2>
 
             <span class="hotel-category">Гостиница</span>
-            <span class="hotel__price">От 4000р</span>
+            <span class="hotel-price">От 4000р</span>
             <div>
               <a class="button-details" href="#">Подробнее</a>
               <a class="button-book" href="#">Забронировать</a>
@@ -71,15 +69,15 @@
           </div>
         </li>
 
-        <li class="hotel__item">
-          <a class="hotel__link" href="#">
-            <img class="hotel_logo" src="img/hotel-small-2.jpg" alt="Фото отеля 2" width="135" height="90">
+        <li class="hotels__item">
+          <a class="hotel-link" href="#">
+            <img class="hotel-logo" src="img/hotel-small-2.jpg" alt="Фото отеля 2" width="135" height="90">
           </a>
-          <div class="hotel-item-booking">
+          <div class="hotel-booking">
             <h2><a class="hotel-name" href="#">Desert Quail Inn</a></h2>
             <p>
               <span class="hotel-category">Мотель</span>
-              <span class="hotel__price">От 3000р</span>
+              <span class="hotel-price">От 3000р</span>
             </p>
             <div>
               <a class="button-details" href="#">Подробнее</a>
@@ -102,15 +100,15 @@
           </div>
         </li>
 
-        <li class="hotel__item">
-          <a class="hotel__link" href="#">
-            <img class="hotel_logo" src="img/hotel-small-3.jpg" alt="Фото отеля 3" width="135" height="90">
+        <li class="hotels__item">
+          <a class="hotel-link" href="#">
+            <img class="hotel-logo" src="img/hotel-small-3.jpg" alt="Фото отеля 3" width="135" height="90">
           </a>
-          <div class="hotel-item-booking">
+          <div class="hotel-booking">
             <h2><a class="hotel-name" href="#">Villas at Poco Diablo</a></h2>
             <p>
               <span class="hotel-category">Апартаменты</span>
-              <span class="hotel__price">От 2000р</span>
+              <span class="hotel-price">От 2000р</span>
             </p>
             <div>
               <a class="button-details" href="#">Подробнее</a>
@@ -134,9 +132,9 @@
   <footer class="footer">
     <p class="hashtag">#VISITSEDONA</p>
     <ul class="social">
-      <li><a href="#" class="social-button" aria-label="Седона в Твиттере">Твиттер</a></li>
-      <li><a href="#" class="social-button" aria-label="Седона на Фейсбуке">Фейсбук</a></li>
-      <li><a href="#" class="social-button" aria-label="Седона на Ютубе">Ютуб </a></li>
+      <li><a href="#" class="social__button tw-button" aria-label="Седона в Твиттере">Твиттер</a></li>
+      <li><a href="#" class="social__button fb-button" aria-label="Седона на Фейсбуке">Фейсбук</a></li>
+      <li><a href="#" class="social__button yt-button" aria-label="Седона на Ютубе">Ютуб </a></li>
     </ul>
     <p>Website by <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy.svg" alt="Логотип htmlacademy"
                                                          width="115" height="41"></a></p>
