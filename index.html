@@ -47,22 +47,29 @@
       </div>
       <div class="search-form">
         <form>
-          <p><label>Дата заезда: <input type="text" name="arrival" value="24 апреля 2017"> </label>
+          <p><label for="arrival">Дата заезда: </label>
+            <input type="text" id="arrival" name="arrival" value="24 апреля 2017">
             <button type="button" class="button-calendar" aria-label="Открыть календарь"></button>
           </p>
-          <p><label>Дата выезда: <input type="text" name="departure" value="4 июля 2017"> </label>
+          <p><label for="departure">Дата выезда: </label> <input type="text" id="departure" name="departure"
+                                                                 value="4 июля 2017">
             <button type="button" class="button-calendar" aria-label="Открыть календарь"></button>
           </p>
-          <p>
+          <div class="persons">
             <label for="adults">Взрослые:</label>
-            <button class="search-form__minus" type="button"></button>
-            <input type="text" id="adults" name="adults" value="2">
-            <button class="search-form__plus" type="button"></button>
-            <label for="kids" >Дети:</label>
-            <button class="search-form__minus" type="button"></button>
+            <div class="persons__amount">
+              <button class="search-form__minus" type="button"></button>
+              <input type="text" id="adults" name="adults" value="2">
+              <button class="search-form__plus" type="button"></button>
+            </div>
+
+            <label class="persons__kids" for="kids">Дети:</label>
+            <div class="persons__amount">
+              <button class="search-form__minus" type="button"></button>
               <input type="text" id="kids" name="kids" value="0">
-            <button class="search-form__plus" type="button"></button>
-          </p>
+              <button class="search-form__plus" type="button"></button>
+            </div>
+          </div>
           <button class="button search-button" type="submit">Найти</button>
         </form>
       </div>
@@ -83,6 +90,9 @@
                                                                            alt="Логотип htmlacademy"
                                                                            width="115" height="41"></a></p>
   </footer>
+
+
 </div>
 </body>
 </html>
+
