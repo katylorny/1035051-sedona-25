@@ -15,6 +15,7 @@ body {
   /*background-image: url("../bg/sedona-index.jpg");*/
   /*background-position: top center;*/
   background-repeat: no-repeat;
+  min-width: 1200px;
 }
 
 .container {
@@ -26,6 +27,17 @@ body {
   -5px 0 15px 5px #dbdbdb;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .body-catalog {
   background-color: #f2f2f2;
   background-image: none;
@@ -33,9 +45,6 @@ body {
 }
 
 /* --------------- HEADER ---------------*/
-
-/* --------------- END HEADER ---------------*/
-
 .nav__items {
   display: flex;
   justify-content: space-between;
@@ -46,6 +55,7 @@ body {
   list-style-type: none;
   margin: 0;
   height: 56px;
+  /*TODO как правильно сделать нависание логотипа над картинкой, чтобы не ограничивать высоту хедера? если сделать абсолютное позиционирование, то другие пкнкты в центр сползут*/
   align-items: center;
 
   margin-bottom: 76px;
@@ -104,14 +114,20 @@ body {
   margin-top: -1px;
 
 }
+/* --------------- END HEADER ---------------*/
 
+
+
+/*-------------------- MAIN -----------------*/
+
+/*---------WELCOME-------*/
 .welcome {
   padding: 0;
   margin: 0;
   text-align: center;
-  background-image: url("../bg/bg-mask.svg");
-  background-repeat: no-repeat;
-  background-position: bottom center;
+  /*background-image: url("../bg/bg-mask.svg");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: bottom center;*/
 
   /*margin-bottom: 59px;*/
 
@@ -121,7 +137,12 @@ body {
   margin-bottom: 74px;
 }
 
-.about-sedona {
+/*-------END WELCOME-------*/
+
+/*---------ABOUT-----------*/
+
+.about {
+  position: relative;
   margin: 0;
   padding: 0;
   background-color: white;
@@ -130,7 +151,20 @@ body {
   text-align: center;
 }
 
-.about-sedona h1 {
+.about::before {
+  content: "";
+  display: block;
+
+  background-image: url("../bg/bg-mask.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -57px;
+  width: 1200px;
+  height: 57px;
+
+}
+
+.about h1 {
   margin: 0;
   margin-bottom: 26px;
   padding: 0;
@@ -139,7 +173,7 @@ body {
   font-weight: bold;
 }
 
-.about-sedona__text {
+.about__text {
 
   padding: 0;
   padding-top: 59px;
@@ -148,14 +182,14 @@ body {
   margin-bottom: 52px;
 }
 
-.about-sedona__text p {
+.about__text p {
   letter-spacing: 0.07px; /*буковки расползались не так как надо*/
   margin: 0;
   margin-bottom: 40px;
 
 }
 
-.about-sedona__features {
+.about__features {
   margin: 0;
   padding: 0;
   height: 1098px;
@@ -163,15 +197,9 @@ body {
   /*margin-bottom: 48px;*/
 }
 
-.filter {
-  margin: 0;
-  margin-top: -75px;
-  padding: 0;
-  height: 217px;
-  background: rgba(0, 255, 255, 0.7);
+/*-------END ABOUT-----------*/
 
-}
-
+/*-------HOTEL-SEARCH--------*/
 .hotel-search {
   position: relative;
   background-color: white;
@@ -243,10 +271,9 @@ body {
   padding: 55px;
   background-color: white;
   width: 568px;
-  height: 395px;
   line-height: 26px;
   font-weight: bold;
-
+  /*TODO как сделать, чтобы оно открывалось/закрывалось, и чтобы по умолчанию было открыто? не нужен ли какой- то класс modal?*/
 }
 
 .search-form form {
@@ -271,7 +298,6 @@ body {
   margin: 0;
   padding: 0;
   display: block;
-
 
 }
 
@@ -312,6 +338,22 @@ body {
   border: none;
   background-color: #f2f2f2;
   padding: 0;
+
+}
+
+.search-form__minus svg,
+.search-form__plus svg {
+  fill: #a9a9a9;
+}
+
+.search-form__minus:hover svg,
+.search-form__plus:hover svg {
+  fill: black;
+}
+
+.search-form__minus:active svg,
+.search-form__plus:active svg {
+  fill: #81b3d2;
 }
 
 .persons__amount input {
@@ -359,13 +401,21 @@ body {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
+/*-----END HOTEL-SEARCH--------*/
+
+/*-------------------- END MAIN -----------------*/
+
+
+/* --------------------FOOTER -------------------*/
 
 .footer {
+  padding: 36px 0;
+  /*padding-left: 132px;*/
+  margin: 0;
   background-color: rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 118px;
 
   /*background-color: white;*/
   /*padding: 37px 0;*/
@@ -377,37 +427,85 @@ body {
 
 }
 
+.social {
+  display: flex;
+  position: relative;
+  left: 30px;
+  padding: 0;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  /*margin-left: 256px;*/
+}
+
 .hashtag {
+  display: block;
+  position: relative;
+  left: 10px;
   font: inherit;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  margin: 0;
+  /*margin-left: 132px;*/
 
 }
 
-.social {
+.social__button {
   display: flex;
+  background-color: #81b3d2;
+  width: 46px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
-
-/*.social__button {*/
-/*background-color: #81b3d2;*/
-/*width: 46px;*/
-/*height: 48px;*/
-/*}*/
 
 .social li {
   list-style-type: none;
 }
 
-/*.footer p {*/
-/*line-height: 26px;*/
-/*}*/
+.copyright {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 18px;
 
-/*.copyright {*/
-/*margin: 39px 0 40px;*/
+  padding: 0;
+  margin: 0;
+  /*margin-left: 229px;*/
+}
 
-/*}*/
-/* каталог */
+.copyright a {
+  display: block;
+  vertical-align: center;
+}
+
+.copyright img {
+  display: block;
+  margin: auto 0;
+  margin-left: 8px;
+}
+
+/* -----------------END FOOTER ------------------*/
+
+
+
+
+
+
+/*---------------------- CATALOG----------------------------------------*/
+
+.filter {
+  margin: 0;
+  margin-top: -75px;
+  padding: 0;
+  height: 217px;
+  background: rgba(0, 255, 255, 0.7);
+
+}
 
 a.hotel-name {
   text-decoration: none;
@@ -449,7 +547,28 @@ a.hotel-name:active {
   right: 9px;
   top: 9px;
   border: none;
-  background: #f2f2f2 url("../img/calendar.svg") no-repeat;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  /*TODO что делать с рамкой? если оставлю, при нажатии некрасиво, уберу - не будет рамки для тех, кто табом по странице ходит */
+
+}
+
+.button-calendar svg {
+  margin: 0;
+  fill: #cacaca;
+
+}
+
+.button-calendar:hover svg,
+.button-calendar:focus svg {
+  fill: black;
+
+}
+
+.button-calendar:active svg {
+  fill: #81b3d2;
+
 }
 
 .button-details:active {
@@ -497,7 +616,6 @@ a.hotel-name:active {
 
 .hotel-booking {
   background-color: red;
-  /*height: 90px;*/
   margin: 0;
   padding: 0;
   margin-left: 30px;
@@ -513,8 +631,6 @@ a.hotel-name:active {
   margin: 0;
   padding: 0;
 }
-
-/*TODO sdafosd;af a;sdf ;adsfouiau*/
 
 .hotel-price {
   background-color: yellow;
