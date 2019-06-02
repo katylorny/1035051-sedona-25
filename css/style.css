@@ -154,14 +154,14 @@ body {
 .about::before {
   content: "";
   display: block;
-
+  padding: 0;
+  margin: 0 auto;
   background-image: url("../bg/bg-mask.svg");
   background-repeat: no-repeat;
   position: absolute;
   top: -57px;
   width: 1200px;
-  height: 57px;
-
+  height: 59px;
 }
 
 .about h1 {
@@ -186,7 +186,6 @@ body {
   letter-spacing: 0.07px; /*буковки расползались не так как надо*/
   margin: 0;
   margin-bottom: 40px;
-
 }
 
 .about__features {
@@ -258,7 +257,7 @@ body {
 .interactive-map {
   padding: 0;
   margin: 0;
-  height: 474px;
+  min-height: 594px;
   background-image: url("../bg/bg-map.jpg");
 }
 
@@ -273,6 +272,7 @@ body {
   width: 568px;
   line-height: 26px;
   font-weight: bold;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
   /*TODO как сделать, чтобы оно открывалось/закрывалось, и чтобы по умолчанию было открыто? не нужен ли какой- то класс modal?*/
 }
 
@@ -410,16 +410,13 @@ body {
 
 .footer {
   padding: 36px 0;
-  /*padding-left: 132px;*/
   margin: 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  margin-top: -120px;
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  /*background-color: white;*/
-  /*padding: 37px 0;*/
-  /*padding: 37px 100px 37px 123px;*/
 }
 
 .footer p {
@@ -429,6 +426,7 @@ body {
 
 .social {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   left: 30px;
   padding: 0;
@@ -498,11 +496,12 @@ body {
 
 /*---------------------- CATALOG----------------------------------------*/
 
+
 .filter {
   margin: 0;
   margin-top: -75px;
   padding: 0;
-  height: 217px;
+  height: 304px;
   background: rgba(0, 255, 255, 0.7);
 
 }
@@ -525,19 +524,58 @@ a.hotel-name:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.nav__link--active {
+  color: #766357;
+}
+
 .button-details {
   background-color: #81b3d2;
   color: white;
   font: inherit;
   text-decoration: none;
   text-align: center;
-  vertical-align: center;
   font-weight: bold;
+  margin: 0;
+  display: block;
+  width: 110px;
+  border: none;
+  padding: 3px 0;
+  margin-right: 6px;
+
 }
 
 .button-details:hover,
 .button-details:focus {
   background-color: #669ec0;
+}
+.button-details:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+.button-book {
+  margin: 0;
+  width: 142px;
+  background-color: #766357;
+  color: white;
+  font: inherit;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: center;
+  font-weight: bold;
+  padding: 3px 0;
+
+}
+
+.button-book:hover,
+.button-book:focus {
+  background-color: #604e43;
+}
+
+.button-book:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-calendar {
@@ -571,30 +609,9 @@ a.hotel-name:active {
 
 }
 
-.button-details:active {
-  background-color: #5496bd;
-  color: rgba(255, 255, 255, 0.3);
-}
 
-.button-book {
-  background-color: #766357;
-  color: white;
-  font: inherit;
-  text-decoration: none;
-  text-align: center;
-  vertical-align: center;
-  font-weight: bold;
-}
 
-.button-book:hover,
-.button-book:focus {
-  background-color: #604e43;
-}
 
-.button-book:active {
-  background-color: #503e33;
-  color: rgba(255, 255, 255, 0.3);
-}
 
 .hotels__items {
   margin: 0;
@@ -605,20 +622,27 @@ a.hotel-name:active {
   display: flex;
   list-style-type: none;
 
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #e5e5e5;
   justify-content: left;
-  align-items: flex-start;
-  padding: 30px 0;
+  /*align-items: flex-start;*/
+  padding: 30px 73px;
   margin: 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: white;
 
 }
 
 .hotel-booking {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   margin-left: 30px;
+}
+
+.hotel-booking p {
+  margin: 0;
+  margin-bottom: 6px;
 }
 
 .hotel-booking h2 {
@@ -626,44 +650,87 @@ a.hotel-name:active {
   padding: 0;
 }
 
-.hotel-category {
-  background-color: yellow;
+.hotel-booking__buttons {
+  display: flex;
+}
+
+
+
+.hotel-name {
+  display: block;
+  padding: 0;
+  margin: 0;
+
+}
+
+.hotel-link {
   margin: 0;
   padding: 0;
+  display: block;
+
+}
+
+.hotel-logo {
+  display: block;
+  margin: 0;
+}
+
+.hotel-category {
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  min-width: 111px;
 }
 
 .hotel-price {
-  background-color: yellow;
+  display: inline-block;
+  vertical-align: baseline;
   margin: 0;
   padding: 0;
 }
 
 .rating {
+
   margin: 0;
-  padding: 0;
   margin-left: auto;
-  margin-right: 72px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
 }
 
-.button-details {
-  margin: 0;
-}
 
-.button-book {
-  margin: 0;
-}
 
 .hotel-name {
-  background-color: yellow;
   margin: 0;
   padding: 0;
+  margin-top: -6px;
+  /*TODO пришлось подвинуть вверх, тк не получалось выровнять текст по верхнему краю картинки из-за высоты строки*/
 }
 
 .rating__stars {
   list-style-type: none;
   display: flex;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.rating__star {
+  margin-left: 6px;
 }
 
 .rating__value {
+  display: block;
   background-color: #f2f2f2;
+  width: 110px;
+  padding: 3px 0;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-catalog {
+  margin-top: 0;
 }
