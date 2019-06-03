@@ -125,6 +125,7 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
+  position: relative;
   /*background-image: url("../bg/bg-mask.svg");*/
   /*background-repeat: no-repeat;*/
   /*background-position: bottom center;*/
@@ -137,6 +138,19 @@ body {
   margin-bottom: 74px;
 }
 
+.welcome:after {
+  content: "";
+  display: block;
+  padding: 0;
+  margin: 0;
+  background-image: url("../bg/bg-mask.svg");
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 59px;
+  position: absolute;
+  bottom: -2px;
+
+}
 /*-------END WELCOME-------*/
 
 /*---------ABOUT-----------*/
@@ -151,19 +165,19 @@ body {
   text-align: center;
 }
 
-.about::before {
-  content: "";
-  display: block;
-  padding: 0;
-  margin: 0 auto;
-  background-image: url("../bg/bg-mask.svg");
-  background-repeat: no-repeat;
-  position: absolute;
-  top: -56px;
-  width: 1200px;
-  height: 59px;
-}
-/*TODO постоянно поднимается выше и получается щель! изначально было top -59, не трогаю эту часть, он отлипает и приходится убавлять маргин!*/
+/*.about::before {*/
+  /*content: "";*/
+  /*display: block;*/
+  /*padding: 0;*/
+  /*margin: 0 auto;*/
+  /*background-image: url("../bg/bg-mask.svg");*/
+  /*background-repeat: no-repeat;*/
+  /*position: absolute;*/
+  /*top: -56px;*/
+  /*width: 1200px;*/
+  /*height: 59px;*/
+/*}*/
+
 
 .about h1 {
   margin: 0;
@@ -242,6 +256,7 @@ body {
   /*padding: 0 138px;*/
   height: 86px;
   width: 568px;
+  outline: none;
 
 }
 
@@ -274,7 +289,6 @@ body {
   line-height: 26px;
   font-weight: bold;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
-  /*TODO как сделать, чтобы оно открывалось/закрывалось, и чтобы по умолчанию было открыто? не нужен ли какой- то класс modal?*/
 }
 
 .search-form form {
@@ -322,6 +336,7 @@ body {
   text-transform: inherit;
   height: 38px;
   width: 346px;
+  outline: none;
 }
 
 .persons__amount {
@@ -342,13 +357,22 @@ body {
 
 }
 
+.search-form__minus,
+.search-form__plus {
+  outline: none;
+}
+
+
 .search-form__minus svg,
 .search-form__plus svg {
   fill: #a9a9a9;
+
 }
 
 .search-form__minus:hover svg,
-.search-form__plus:hover svg {
+.search-form__plus:hover svg,
+.search-form__minus:focus svg,
+.search-form__plus:focus svg{
   fill: black;
 }
 
@@ -391,6 +415,7 @@ body {
   width: 100%;
   height: 58px;
   margin-top: 54px;
+  outline: none;
 }
 
 .search-button:hover,
@@ -618,8 +643,6 @@ a.hotel-name:active {
   padding: 0;
   background-color: transparent;
   outline: none;
-  /*TODO что делать с рамкой? если оставлю, при нажатии некрасиво, уберу - не будет рамки для тех, кто табом по странице ходит */
-
 }
 
 .button-calendar svg {
@@ -738,7 +761,6 @@ a.hotel-name:active {
   margin: 0;
   padding: 0;
   margin-top: -6px;
-  /*TODO пришлось подвинуть вверх, тк не получалось выровнять текст по верхнему краю картинки из-за высоты строки*/
 }
 
 .rating__stars {
