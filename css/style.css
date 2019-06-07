@@ -58,7 +58,7 @@ body {
   line-height: 26px;
   list-style-type: none;
   margin: 0;
-  height: 56px;
+  /*height: 56px;*/
   /*TODO как правильно сделать нависание логотипа над картинкой, чтобы не ограничивать высоту хедера? если сделать абсолютное позиционирование, то другие пкнкты в центр сползут*/
   align-items: center;
 
@@ -86,14 +86,26 @@ body {
 
 .nav__item {
   padding: 0;
-  margin: 16px 0 18px;
+  margin: 14px 0 16px;
   width: 239px;
   text-align: center;
+
+}
+
+.nav__items li:nth-of-type(2) {
+  margin-left: 3px;
 }
 
 .nav__items li:nth-last-child(2) {
   margin-left: auto;
+  margin-right: -1px;
 }
+
+.nav__items li:last-child a {
+  position: relative;
+  left: 8px;
+}
+
 
 .nav__logo {
   position: absolute;
@@ -118,19 +130,14 @@ body {
   margin: 0;
   text-align: center;
   position: relative;
-  background-image: url("../bg/bg-main.jpg");
-  background-position: top center;
-  /*background-image: url("../bg/bg-mask.svg");*/
-  /*background-repeat: no-repeat;*/
-  /*background-position: bottom center;*/
-
-  /*margin-bottom: 59px;*/
-
+  background: #9aa2a9 url("../bg/bg-main.jpg") no-repeat;
+  background-position: 0 -56px;
+  line-height: 0;
 }
 
 .welcome img {
-  margin-bottom: 79px;
   margin-top: 76px;
+  margin-bottom: 79px;
 }
 
 .welcome:after {
@@ -139,12 +146,11 @@ body {
   padding: 0;
   margin: 0;
   background-image: url("../bg/bg-mask.svg");
-
   background-repeat: no-repeat;
   width: 1200px;
-  height: 58px;
+  height: 57px;
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   right: 0;
   left: 0;
 
@@ -189,7 +195,7 @@ body {
 .about__text {
 
   padding: 0;
-  padding-top: 59px;
+  padding-top: 60px;
   width: 492px;
   margin: 0 auto;
   margin-bottom: 52px;
@@ -198,7 +204,6 @@ body {
 .about__text p {
   letter-spacing: 0.07px; /*буковки расползались не так как надо*/
   margin: 0;
-  margin-bottom: 40px;
 }
 
 .about__features {
@@ -206,7 +211,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   /*height: 1098px;*/
-  background: rgba(0, 255, 255, 0.3);
+  background: white;
   /*margin-bottom: 48px;*/
 
 }
@@ -218,11 +223,12 @@ body {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about__feature {
   width: 400px;
-  padding: 50px 49px 40px 49px;
+  padding: 47px 49px 40px 49px;
   margin: 0;
   box-sizing: border-box;
   background-color: #eeeeee;
@@ -230,6 +236,16 @@ body {
 
 .about__feature h3 {
   margin: 0;
+  font-size: 21px;
+  line-height: 21px;
+  margin-bottom: 21px;
+}
+
+.about__feature p {
+  margin: 0;
+  margin-top: 19px;
+  line-height: 21px;
+  margin-bottom: 19px;
 }
 
 .about__first {
@@ -239,6 +255,7 @@ body {
   background: url("../bg/bg-features-1.jpg") no-repeat;
   background-position: 400px 0;
   order: -2;
+  color: white;
 }
 
 .about__second {
@@ -247,14 +264,13 @@ body {
   justify-content: flex-end;
   background: url("../bg/bg-features-2.jpg") no-repeat;
   background-position: 0 0;
+  color: white;
 }
 
 .about__first .about__feature,
 .about__second .about__feature {
   background-color: #81b3d2;
 }
-
-
 
 .add {
   order: -1;
@@ -271,19 +287,20 @@ body {
 .add__item {
   box-sizing: border-box;
   width: 400px;
-  padding-top: 164px;
-  padding-bottom: 90px;
+  padding-top: 162px;
+  padding-bottom: 82px;
 }
 
 .add__item h3 {
   font-size: 21px;
   line-height: 21px;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 23px;
 }
 
 .add__item p {
   margin: 0;
+  line-height: 21px;
 }
 
 .add__text {
@@ -309,7 +326,7 @@ body {
   height: 72px;
   background: url("../img/icon-1.svg") no-repeat;
   position: absolute;
-  top: -113px;
+  top: -103px;
   left: 50%;
   transform: translate(-50%);
 }
@@ -320,7 +337,7 @@ body {
   height: 70px;
   background: url("../img/icon-3.svg") no-repeat;
   position: absolute;
-  top: -113px;
+  top: -103px;
   left: 50%;
   transform: translate(-50%);
 }
@@ -329,10 +346,9 @@ body {
   content: "";
   width: 64px;
   height: 76px;
-
   background: url("../img/icon-2.svg") no-repeat;
   position: absolute;
-  top: -113px;
+  top: -103px;
   left: 50%;
   transform: translate(-50%);
 }
@@ -400,7 +416,7 @@ body {
 .interactive-map {
   padding: 0;
   margin: 0;
-  min-height: 594px;
+  min-height: 593px;
   background-image: url("../bg/bg-map.jpg");
 }
 
@@ -561,7 +577,7 @@ body {
 /* --------------------FOOTER -------------------*/
 
 .footer {
-  padding: 36px 0;
+  padding: 35px 0;
   margin: 0;
   position: relative;
   margin-top: -120px;
@@ -592,7 +608,7 @@ body {
 .hashtag {
   display: block;
   position: relative;
-  left: 10px;
+  left: 13px;
   font: inherit;
   font-size: 21px;
   line-height: 26px;
@@ -644,6 +660,8 @@ body {
 .copyright span {
   display: block;
   margin-right: 9px;
+  position: relative;
+  left: 2px;
 }
 
 .copyright a {
@@ -655,7 +673,7 @@ body {
   width: 115px;
   height: 41px;
   fill: #231f20;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .copyright:hover svg,
@@ -784,7 +802,7 @@ a.hotel-name:active {
   border-bottom: 1px solid #e5e5e5;
   justify-content: left;
   /*align-items: flex-start;*/
-  padding: 30px 73px;
+  padding: 29px 72px 31px 73px;
   margin: 0;
   background-color: white;
 
@@ -892,14 +910,10 @@ a.hotel-name:active {
 /*----------------- FILTER --------------------------*/
 
 .filter {
-
   margin: 0;
-  /*margin-top: -75px;*/
-
-  /*height: 304px;*/
   background: #99a1a7 url("../bg/bg-catalog.jpg") no-repeat;
   color: white;
-  padding: 30px 74px;
+  padding: 27px 76px 6px 71px;
 }
 
 .filter__form {
@@ -913,9 +927,18 @@ a.hotel-name:active {
 }
 
 .filter fieldset {
-  /*margin: 0;*/
+  margin: 0;
   padding: 0;
   border: none;
+}
+
+.filter legend {
+  font: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+
 }
 
 /*-----------END FILTER -------------*/
@@ -923,7 +946,7 @@ a.hotel-name:active {
 .sorting {
   background-color: white;
   display: flex;
-  padding: 25px 73px 32px 71px;
+  padding: 32px 73px 31px 72px;
   justify-content: flex-start;
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
@@ -937,7 +960,9 @@ a.hotel-name:active {
 }
 
 .sorting__title {
+  margin: 0;
   margin-left: 49px;
+  margin-top: 2px;
   font-weight: bold;
 }
 
@@ -945,11 +970,12 @@ a.hotel-name:active {
   display: flex;
   list-style: none;
   margin: 0;
-  margin-left: 6px;
+  margin-left: 4px;
+  padding: 0;
 }
 
 .sorting__type li {
-  margin-left: 34px;
+  margin-left: 33px;
 }
 
 .sorting__type a {
@@ -1008,15 +1034,6 @@ a.hotel-name:active {
   width: 181px;
 }
 
-.filter legend {
-  font: inherit;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 25px;
-
-}
-
 .housing {
   width: 181px;
   margin: 0;
@@ -1032,7 +1049,8 @@ a.hotel-name:active {
 .filter__item {
   position: relative;
   display: block;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
+  margin-top: 15px;
 }
 
 .filter__item input {
@@ -1042,7 +1060,7 @@ a.hotel-name:active {
 .filter__item span {
   /*display: block;*/
   position: absolute;
-  left: 40px;
+  left: 42px;
   top: 0;
 }
 
@@ -1054,7 +1072,7 @@ a.hotel-name:active {
   height: 32px;
   padding: 0;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
 }
 
@@ -1068,6 +1086,10 @@ a.hotel-name:active {
   padding: 0;
   padding-left: 65px;
   cursor: pointer;
+}
+
+.controls__price label:nth-of-type(2) {
+  padding-left: 53px;
 }
 
 .controls__price input {
@@ -1115,31 +1137,35 @@ a.hotel-name:active {
   width: 80%;
   height: 2px;
   background-color: white;
+  margin: 0;
   /*z-index: 2;*/
 
 }
 
 .toggle {
-  width: 2px;
-  height: 2px;
+  width: 4px;
+  height: 4px;
   background-color: #b1b1b1;
   border: 8px solid white;
   border-radius: 50%;
   /*z-index: 3;*/
   cursor: pointer;
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.3);
+}
 
+.toggle:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .toggle-min {
   position: absolute;
-  top: -8px;
-  left: 0;
+  top: -9px;
 }
 
 .toggle-max {
   position: absolute;
-  top: -8px;
-  left: 80%;
+  top: -9px;
+  left: calc(80%);
 }
 
 .filter__button {
@@ -1150,9 +1176,9 @@ a.hotel-name:active {
   font: inherit;
   color: inherit;
   text-transform: inherit;
-  padding: 10px 36px;
+  padding: 5px 34px;
   margin: 0 auto;
-  margin-top: 24px;
+  margin-left: 85px;
   cursor: pointer;
 }
 
@@ -1167,8 +1193,8 @@ input[type="checkbox"] + div {
   height: 23px;
   background: url("../bg/sprite-checkbox.png") no-repeat;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1px;
+  left: 1px;
 
 }
 
