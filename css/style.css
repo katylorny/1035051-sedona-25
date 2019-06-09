@@ -61,7 +61,8 @@ body {
   /*height: 56px;*/
   /*TODO как правильно сделать нависание логотипа над картинкой, чтобы не ограничивать высоту хедера? если сделать абсолютное позиционирование, то другие пкнкты в центр сползут*/
   align-items: center;
-
+  padding-left: 72px;
+  padding-right: 72px;
   /*margin-bottom: 76px;*/
   /*text-align: center;*/
 }
@@ -87,23 +88,31 @@ body {
 .nav__item {
   padding: 0;
   margin: 14px 0 16px;
-  width: 239px;
-  text-align: center;
-
+  width: 241px;
+  text-align: left;
 }
 
 .nav__items li:nth-of-type(2) {
-  margin-left: 3px;
+  /*margin-left: 3px;*/
+  margin-right: auto;
+  letter-spacing: 0.1px;
 }
 
 .nav__items li:nth-last-child(2) {
   margin-left: auto;
-  margin-right: -1px;
+  /*margin-right: -1px;*/
+  text-align: right;
+  letter-spacing: 0.4px;  /*расстояние между буквами не то*/
+}
+
+.nav__items li:last-child {
+  text-align: right;
 }
 
 .nav__items li:last-child a {
-  position: relative;
-  left: 8px;
+  /*position: relative;*/
+  /*left: 8px;*/
+
 }
 
 
@@ -224,6 +233,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .about__feature {
@@ -234,11 +245,72 @@ body {
   background-color: #eeeeee;
 }
 
+.about__feature span {
+  position: relative;
+}
+
+.about__feature span::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background-color: white;
+  opacity: 0.3;
+  top: 9px;
+  left: -13px;
+}
+
+.about__feature span::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background-color: white;
+  opacity: 0.3;
+  top: 9px;
+  left: 27px;
+}
+
+.about__third span::before,
+.about__fourth span::before,
+.about__fifth span::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background-color: black;
+  opacity: 0.3;
+  top: 9px;
+  left: -13px;
+}
+
+.about__third span::after,
+.about__fourth span::after,
+.about__fifth span::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background-color: black;
+  opacity: 0.3;
+  top: 9px;
+  left: 27px;
+}
+
+.about__third p,
+.about__fourth p,
+.about__fifth p {
+  letter-spacing: 0.1px;
+  text-indent: 4px;
+}
+
+
 .about__feature h3 {
   margin: 0;
   font-size: 21px;
   line-height: 21px;
   margin-bottom: 21px;
+  text-indent: 6px;
 }
 
 .about__feature p {
@@ -314,10 +386,13 @@ body {
 
 .add__second {
   position: relative;
+
 }
 
 .add__third {
   position: relative;
+  letter-spacing: 0.1px;
+  text-indent: 2px;
 }
 
 .add__first:before {
@@ -337,7 +412,7 @@ body {
   height: 70px;
   background: url("../img/icon-3.svg") no-repeat;
   position: absolute;
-  top: -103px;
+  top: -101px;
   left: 50%;
   transform: translate(-50%);
 }
@@ -348,7 +423,7 @@ body {
   height: 76px;
   background: url("../img/icon-2.svg") no-repeat;
   position: absolute;
-  top: -103px;
+  top: -106px;
   left: 50%;
   transform: translate(-50%);
 }
@@ -364,14 +439,20 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  padding-top: 50px;
+
 
 }
 
 .hotel-search__text {
   margin: 0 auto;
   padding: 0;
+  padding-top: 50px;
+  position: relative;
+  z-index: 1;
+}
 
+.hotel-search__text p {
+  text-indent: 5px;
 }
 
 .hotel-search h2 {
@@ -432,6 +513,11 @@ body {
   line-height: 26px;
   font-weight: bold;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+  display: none;
+
 }
 
 .search-form form {
@@ -497,6 +583,7 @@ body {
   border: none;
   background-color: #f2f2f2;
   padding: 0;
+  padding-top: 4px;
 
 }
 
@@ -615,6 +702,7 @@ body {
   font-weight: bold;
   margin: 0;
   /*margin-left: 132px;*/
+  padding-bottom: 3px;
 
 }
 
@@ -831,12 +919,6 @@ a.hotel-name:active {
   display: flex;
 }
 
-.hotel-name {
-  display: block;
-  padding: 0;
-  margin: 0;
-
-}
 
 .hotel-link {
   margin: 0;
@@ -879,8 +961,9 @@ a.hotel-name:active {
 
 .hotel-name {
   margin: 0;
+  display: block;
   padding: 0;
-  margin-top: -6px;
+  margin-top: -4px;
 }
 
 .rating__stars {
@@ -912,6 +995,7 @@ a.hotel-name:active {
 .filter {
   margin: 0;
   background: #99a1a7 url("../bg/bg-catalog.jpg") no-repeat;
+  background-position: 0 -56px;
   color: white;
   padding: 27px 76px 6px 71px;
 }
@@ -1130,7 +1214,7 @@ a.hotel-name:active {
   padding: 0;
 
   position: absolute;
-  /*z-index: 1;*/
+
 }
 
 .bar {
@@ -1138,7 +1222,7 @@ a.hotel-name:active {
   height: 2px;
   background-color: white;
   margin: 0;
-  /*z-index: 2;*/
+
 
 }
 
@@ -1148,7 +1232,7 @@ a.hotel-name:active {
   background-color: #b1b1b1;
   border: 8px solid white;
   border-radius: 50%;
-  /*z-index: 3;*/
+
   cursor: pointer;
   box-shadow: 0 2px 0 rgba(255, 255, 255, 0.3);
 }
