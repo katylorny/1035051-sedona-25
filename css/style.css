@@ -449,6 +449,7 @@ body {
   padding-top: 50px;
   position: relative;
   z-index: 1;
+  background-color: white;
 }
 
 .hotel-search__text p {
@@ -515,10 +516,36 @@ body {
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
 }
 
-.modal-close {
-  display: none;
-
+@keyframes creep {
+  to {
+    transform: translateY(-400px);
+  }
 }
+
+/*@keyframes creepdown {*/
+  /*from {*/
+    /*transform: translateX(-500px);*/
+  /*}*/
+  /*to {*/
+     /*transform: translateX(0);*/
+  /*}*/
+/*}*/
+
+
+/*@keyframes*/
+
+.modal-close {
+  /*display: none;*/
+  animation-name: creep;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+/*.modal-open {*/
+  /*animation-name: creepdown;*/
+  /*animation-duration: 1s;*/
+  /*animation-fill-mode: forwards;*/
+/*}*/
 
 .search-form form {
   display: flex;
@@ -1289,3 +1316,4 @@ input[type="checkbox"]:checked + div {
 input[type="checkbox"]:disabled + div {
   opacity: 0.3;
 }
+
