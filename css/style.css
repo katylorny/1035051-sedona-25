@@ -51,6 +51,7 @@ body {
 
 .nav__items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
   background-color: white;
@@ -323,6 +324,7 @@ body {
 .about__first {
   width: 1200px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   background: url("../bg/bg-features-1.jpg") no-repeat;
   background-position: 400px 0;
@@ -333,6 +335,7 @@ body {
 .about__second {
   width: 1200px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   background: url("../bg/bg-features-2.jpg") no-repeat;
   background-position: 0 0;
@@ -351,6 +354,7 @@ body {
 .add__list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   background-color: white;
   margin: 0;
   padding: 0;
@@ -499,7 +503,7 @@ body {
   padding: 0;
   margin: 0;
   min-height: 593px;
-  background-image: url("../bg/bg-map.jpg");
+  background: #f2f1ef url("../bg/bg-map.jpg") no-repeat;
 }
 
 .search-form {
@@ -522,14 +526,14 @@ body {
   }
 }
 
-/*@keyframes creepdown {*/
-  /*from {*/
-    /*transform: translateX(-500px);*/
-  /*}*/
-  /*to {*/
-     /*transform: translateX(0);*/
-  /*}*/
-/*}*/
+@keyframes creepdown {
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+     transform: translateX(0);
+  }
+}
 
 
 /*@keyframes*/
@@ -541,11 +545,11 @@ body {
   animation-fill-mode: forwards;
 }
 
-/*.modal-open {*/
-  /*animation-name: creepdown;*/
-  /*animation-duration: 1s;*/
-  /*animation-fill-mode: forwards;*/
-/*}*/
+.modal-open {
+  animation-name: creepdown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 
 .search-form form {
   display: flex;
@@ -559,6 +563,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 29px;
@@ -574,6 +579,7 @@ body {
 
 .persons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   align-items: center;
@@ -597,6 +603,7 @@ body {
 
 .persons__amount {
   display: flex;
+  flex-wrap: wrap;
   width: 114px;
   margin: 0;
   align-items: center;
@@ -697,6 +704,7 @@ body {
   margin-top: -120px;
   background-color: rgba(255, 255, 255, 0.9);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -763,6 +771,7 @@ body {
 
 .copyright {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   position: relative;
   left: 18px;
@@ -912,6 +921,7 @@ a.hotel-name:active {
 
 .hotels__item {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
 
   border-bottom: 1px solid #e5e5e5;
@@ -925,6 +935,7 @@ a.hotel-name:active {
 
 .hotel-booking {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   margin: 0;
@@ -944,6 +955,7 @@ a.hotel-name:active {
 
 .hotel-booking__buttons {
   display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -1031,6 +1043,7 @@ a.hotel-name:active {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .filter__form label {
@@ -1057,6 +1070,7 @@ a.hotel-name:active {
 .sorting {
   background-color: white;
   display: flex;
+  flex-wrap: wrap;
   padding: 32px 73px 31px 72px;
   justify-content: flex-start;
   align-items: center;
@@ -1079,6 +1093,7 @@ a.hotel-name:active {
 
 .sorting__type {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   margin-left: 4px;
@@ -1108,6 +1123,11 @@ a.hotel-name:active {
   margin-left: auto;
   width: 34px;
   height: 10px;
+
+}
+
+.sorting__arrows::before,
+.sorting__arrows::after {
 
 }
 
@@ -1299,7 +1319,7 @@ a.hotel-name:active {
   background-color: white;
 }
 
-input[type="checkbox"] + div {
+input[type="checkbox"] + .filter__checkbox {
   width: 27px;
   height: 23px;
   background: url("../bg/sprite-checkbox.png") no-repeat;
@@ -1309,11 +1329,11 @@ input[type="checkbox"] + div {
 
 }
 
-input[type="checkbox"]:checked + div {
+input[type="checkbox"]:checked + .filter__checkbox {
   background-position: -27px 0;
 }
 
-input[type="checkbox"]:disabled + div {
+input[type="checkbox"]:disabled + .filter__checkbox {
   opacity: 0.3;
 }
 
