@@ -5,7 +5,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body-catalog">
 <div class="container">
@@ -21,7 +21,6 @@
           <a class="nav__link" href="info.html">Информация</a></li>
         <li class="nav__item">
           <a class="nav__link" href="galery.html">Фото и видео</a></li>
-
         <li class="nav__item">
           <a class="nav__link " href="map.html">Карта штата</a></li>
         <li class="nav__item">
@@ -33,7 +32,7 @@
   <main>
     <section class="filter">
       <h2 class="visually-hidden">Фильтр гостиниц</h2>
-      <form class="filter__form">
+      <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
         <div class="infrastructure">
           <fieldset>
             <legend>Инфраструктура:</legend>
@@ -71,7 +70,7 @@
         <div class="controls">
           <fieldset>
             <legend>Стоимость в сутки (Р):</legend>
-            <div  class="controls__price">
+            <div class="controls__price">
               <label>от<input type="text" value="0"></label>
               <label>до<input type="text" value="3000"></label>
             </div>
@@ -99,7 +98,18 @@
           <li><a href="#">По типу</a></li>
           <li><a href="#">По рейтингу</a></li>
         </ul>
-        <div class="sorting__arrows"></div>
+        <div class="sorting__arrows">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <path d="M5.5 0L0 10h11z"/>
+            </svg>
+          </a>
+          <a href="#" class="sorting__arrows--active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <path d="M5.5 10L0 0h11"/>
+            </svg>
+          </a>
+        </div>
       </div>
       <ul class="hotels__items">
         <li class="hotels__item">
@@ -132,12 +142,9 @@
                 <img src="img/star.svg" alt="Звезда" width="18" height="17">
               </li>
             </ul>
-            <span class="rating__value">Рейтинг: 8,9</span>
+            <div class="rating__value">Рейтинг: 8,9</div>
           </div>
         </li>
-
-
-
         <li class="hotels__item">
           <a class="hotel-link" href="#">
             <img class="hotel-logo" src="img/hotel-small-2.jpg" alt="Фото отеля 2" width="135" height="90">
@@ -168,7 +175,6 @@
             <span class="rating__value">Рейтинг: 8,9</span>
           </div>
         </li>
-
         <li class="hotels__item">
           <a class="hotel-link" href="#">
             <img class="hotel-logo" src="img/hotel-small-3.jpg" alt="Фото отеля 3" width="135" height="90">
@@ -199,31 +205,36 @@
   </main>
 
   <footer class="footer footer-catalog">
-
     <p class="hashtag"> #VISITSEDONA </p>
     <ul class="social">
-      <li><a href="#" class="social__button"><span class="visually-hidden">Твиттер</span>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15"
-             viewBox="0 0 17 15">
-          <path fill="#FFF"
-                d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
-        </svg>
-      </a></li>
-      <li><a href="#" class="social__button"><span class="visually-hidden">Фейсбук</span>
-        <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      <li>
+        <a href="#" class="social__button"><span class="visually-hidden" aria-label="Седона в Твиттере">Твиттер</span>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15"
+               viewBox="0 0 17 15">
+            <path fill="#FFF"
+                  d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="social__button"><span class="visually-hidden" aria-label="Седона на Фейсбуке">Фейсбук</span>
+          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
 <path fill="#FFFFFF" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"/>
 </svg>
-      </a></li>
-      <li><a href="#" class="social__button"><span class="visually-hidden">Ютуб</span>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16"
-             viewBox="0 0 20 16">
-          <path fill="#FFF"
-                d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
-        </svg>
-      </a></li>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="social__button"><span class="visually-hidden" aria-label="Седона на Ютубе">Ютуб</span>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16"
+               viewBox="0 0 20 16">
+            <path fill="#FFF"
+                  d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
+          </svg>
+        </a>
+      </li>
     </ul>
-    <p class="copyright"><span>Website by</span>
+    <div class="copyright"><span>Website by</span>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.08 36.85">
           <title>logo-htmlacademy-small1</title>
@@ -232,7 +243,7 @@
             transform="translate(0 -0.02)"/>
         </svg>
       </a>
-    </p>
+    </div>
   </footer>
 </div>
 </body>

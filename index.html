@@ -5,7 +5,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
@@ -21,9 +21,8 @@
           <a class="nav__link" href="info.html">Информация</a></li>
         <li class="nav__item">
           <a class="nav__link" href="galery.html">Фото и видео</a></li>
-
         <li class="nav__item">
-          <a class="nav__link" href="map.html">Карта  штата</a></li>
+          <a class="nav__link" href="map.html">Карта штата</a></li>
         <li class="nav__item">
           <a class="nav__link" href="catalog.html">Гостиницы</a></li>
       </ul>
@@ -43,12 +42,13 @@
         <ul class="about__list">
           <li class="about__first">
             <div class="about__feature">
-              <h3>Настоящий <br> городок</h3> <span>№1</span>
+              <h3>Настоящий городок</h3> <span>№1</span>
               <p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
             </div>
+            <img src="img/bg-features-1.jpg" width="800" height="256" alt="Пейзаж Седоны">
           </li>
-
           <li class="about__second">
+            <img src="img/bg-features-2.jpg" width="800" height="256" alt="Мост дьявола">
             <div class="about__feature">
               <h3>Там есть <br> мост дьявола</h3> <span>№2 </span>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -56,40 +56,40 @@
           </li>
           <li class="about__third">
             <div class="about__feature">
-              <h3>Небольшая <br> площадь</h3><span>№3</span>
-            <p>Все достопримечательности <br> находятся очень близко</p>
+              <h3>Небольшая площадь</h3><span>№3</span>
+              <p>Все достопримечательности находятся очень близко</p>
             </div>
           </li>
           <li class="about__fourth">
             <div class="about__feature">
-              <h3>Красивая <br> дорога</h3><span>№4</span>
-            <p>Ехать в Седону из Лас-Вегаса совсем <br> не скучно!</p>
+              <h3>Красивая дорога</h3><span>№4</span>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
           </li>
           <li class="about__fifth">
             <div class="about__feature">
-              <h3>Мало <br> туристов</h3><span>№5</span>
-            <p>Большинство едет в гранд каньон <br> и толпится там</p>
+              <h3>Мало туристов</h3><span>№5</span>
+              <p>Большинство едет в гранд каньон и толпится там</p>
             </div>
           </li>
           <li class="add">
-            <ul  class="add__list">
+            <ul class="add__list">
               <li class="add__item">
                 <div class="add__text add__first">
-                <h3>Жилье</h3>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                  <h3>Жилье</h3>
+                  <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </div>
               </li>
               <li class="add__item">
                 <div class="add__text add__second">
-                <h3>Еда</h3>
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                  <h3>Еда</h3>
+                  <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </div>
               </li>
               <li class="add__item">
                 <div class="add__text add__third">
-                <h3>Сувениры</h3>
-                <p>Не только китайского, но и местного производства!</p>
+                  <h3>Сувениры</h3>
+                  <p>Не только китайского, но и местного производства!</p>
                 </div>
               </li>
             </ul>
@@ -102,7 +102,7 @@
       <div class="hotel-search__text">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="hotel-search__button">Поиск гостиницы в Седоне</button>
+        <button type="button" class="hotel-search__button">Поиск гостиницы в Седоне</button>
       </div>
       <div class="search-form">
         <form action="https://echo.htmlacademy.ru" method="POST">
@@ -118,7 +118,7 @@
             </button>
           </p>
           <p><label for="departure">Дата&nbsp; выезда: </label> <input type="text" id="departure" name="departure"
-                                                                 value="4 июля 2017">
+                                                                       value="4 июля 2017">
             <button type="button" class="button-calendar" aria-label="Открыть календарь">
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
                 <path
@@ -144,7 +144,6 @@
                 </svg>
               </button>
             </div>
-
             <label class="persons__kids" for="kids">Дети:</label>
             <div class="persons__amount">
               <button class="search-form__minus" type="button">
@@ -171,11 +170,10 @@
   </main>
 
   <footer class="footer">
-
     <p class="hashtag"> #VISITSEDONA </p>
     <ul class="social">
       <li>
-        <a href="#" class="social__button"><span class="visually-hidden">Твиттер</span>
+        <a href="#" class="social__button"><span class="visually-hidden" aria-label="Седона в Твиттере">Твиттер</span>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15"
                viewBox="0 0 17 15">
             <path fill="#FFF"
@@ -184,7 +182,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="social__button"><span class="visually-hidden">Фейсбук</span>
+        <a href="#" class="social__button"><span class="visually-hidden" aria-label="Седона на Фейсбуке">Фейсбук</span>
           <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
 <path fill="#FFFFFF" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"/>
@@ -192,7 +190,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="social__button"><span class="visually-hidden">Ютуб</span>
+        <a href="#" class="social__button"><span class="visually-hidden" aria-label="Седона на Ютубе">Ютуб</span>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16"
                viewBox="0 0 20 16">
             <path fill="#FFF"
@@ -201,7 +199,7 @@
         </a>
       </li>
     </ul>
-    <p class="copyright"><span>Website by</span>
+    <div class="copyright"><span>Website by</span>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.08 36.85">
           <title>logo-htmlacademy-small1</title>
@@ -210,10 +208,8 @@
             transform="translate(0 -0.02)"/>
         </svg>
       </a>
-    </p>
+    </div>
   </footer>
-
-
 </div>
 <script src="js/form.min.js"></script>
 </body>
