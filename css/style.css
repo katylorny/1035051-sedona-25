@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,13 +12,8 @@ body {
   font-weight: normal;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  -webkit-box-shadow: 0 0 10px -2px grey,
-  0 0 5px grey;
-  box-shadow: 0 0 10px -2px grey,
-  0 0 5px grey;
-
   background-repeat: no-repeat;
-  min-width: 1200px;
+  height: 100%;
 }
 
 .container {
@@ -42,7 +41,6 @@ body {
 .body-catalog {
   background-color: #f2f2f2;
   background-image: none;
-  /*background-image: url("../sedona-hotels.jpg");*/
 }
 
 /* --------------- HEADER ---------------*/
@@ -66,15 +64,11 @@ body {
   line-height: 26px;
   list-style-type: none;
   margin: 0;
-  /*height: 56px;*/
-  /*TODO как правильно сделать нависание логотипа над картинкой, чтобы не ограничивать высоту хедера? если сделать абсолютное позиционирование, то другие пкнкты в центр сползут*/
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   padding-left: 72px;
   padding-right: 72px;
-  /*margin-bottom: 76px;*/
-  /*text-align: center;*/
 }
 
 .nav__link {
@@ -103,26 +97,18 @@ body {
 }
 
 .nav__items li:nth-of-type(2) {
-  /*margin-left: 3px;*/
   margin-right: auto;
   letter-spacing: 0.1px;
 }
 
 .nav__items li:nth-last-child(2) {
   margin-left: auto;
-  /*margin-right: -1px;*/
   text-align: right;
   letter-spacing: 0.4px; /*расстояние между буквами не то*/
 }
 
 .nav__items li:last-child {
   text-align: right;
-}
-
-.nav__items li:last-child a {
-  /*position: relative;*/
-  /*left: 8px;*/
-
 }
 
 .nav__logo {
@@ -159,7 +145,7 @@ body {
   margin-bottom: 79px;
 }
 
-.welcome:after {
+.welcome::after {
   content: "";
   display: block;
   padding: 0;
@@ -216,9 +202,8 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  /*height: 1098px;*/
+
   background: white;
-  /*margin-bottom: 48px;*/
 
 }
 
@@ -517,7 +502,6 @@ body {
   font-family: inherit;
   margin: 0;
   margin-top: 33px;
-  /*padding: 0 138px;*/
   height: 86px;
   width: 568px;
   outline: none;
@@ -558,10 +542,9 @@ body {
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
 }
 
-/*@keyframes*/
+
 
 .modal-close {
-  /*display: none;*/
   -webkit-animation-name: creep;
   animation-name: creep;
   -webkit-animation-duration: 1s;
@@ -754,10 +737,11 @@ body {
 /* --------------------FOOTER -------------------*/
 
 .footer {
-  padding: 35px 0;
+  padding: 30px 0;
+  padding-bottom: 38px;
   margin: 0;
   position: relative;
-  margin-top: -120px;
+  margin-top: -127px;
   background-color: rgba(255, 255, 255, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -793,11 +777,11 @@ body {
   -ms-flex-align: center;
   align-items: center;
   margin: 0;
-  /*margin-left: 256px;*/
 }
 
 .hashtag {
   display: block;
+  max-width: 240px;
   position: relative;
   left: 13px;
   font: inherit;
@@ -805,9 +789,7 @@ body {
   line-height: 26px;
   font-weight: bold;
   margin: 0;
-  /*margin-left: 132px;*/
   padding-bottom: 3px;
-
 }
 
 .social__button {
@@ -825,6 +807,8 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .social__button:hover,
@@ -858,7 +842,6 @@ body {
 
   padding: 0;
   margin: 0;
-  /*margin-left: 229px;*/
 }
 
 .copyright span {
@@ -900,6 +883,7 @@ body {
   font-weight: bold;
   color: black;
   font-family: inherit;
+  max-width: 370px;
 }
 
 .hotel-name:hover,
@@ -1018,7 +1002,6 @@ body {
   -webkit-box-pack: left;
   -ms-flex-pack: left;
   justify-content: left;
-  /*align-items: flex-start;*/
   padding: 29px 72px 31px 73px;
   margin: 0;
   background-color: white;
@@ -1075,7 +1058,7 @@ body {
 
 .hotel-category {
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: middle;
   margin: 0;
   padding: 0;
   min-width: 111px;
@@ -1185,10 +1168,6 @@ body {
   margin-bottom: 25px;
 }
 
-/*.housing legend {*/
-/*margin-bottom: 10px;*/
-/*}*/
-
 /*-----------END FILTER -------------*/
 
 .sorting {
@@ -1240,7 +1219,6 @@ body {
 
 .sorting__type a {
   color: #dadada;
-  /*opacity: 0.3;*/
   text-decoration: none;
   border-bottom: 2px dotted #81b3d2;
 }
@@ -1262,7 +1240,6 @@ body {
 }
 
 .sorting__arrows {
-  /*position: relative;*/
   margin-left: auto;
   width: 34px;
   height: 10px;
@@ -1279,16 +1256,16 @@ body {
   vertical-align: top;
 }
 
-.sorting__arrows a:hover svg,
-.sorting__arrows a:focus svg {
+.sorting__arrow:hover svg,
+.sorting__arrow:focus svg {
   fill: black;
 }
 
-.sorting__arrows a:active svg {
+.sorting__arrow:active svg {
   fill: #81b3d2;
 }
 
-.sorting__arrows--active svg {
+.sorting__arrow--active svg {
   fill: #81b3d2;
 }
 
